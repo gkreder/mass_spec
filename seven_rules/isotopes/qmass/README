@@ -1,0 +1,44 @@
+Program qmass calculates accurate masses, intensities and isotopic
+compositions of isotopic peaks according to the algorithm published in:
+
+Rockwood, A.L.; Van Orman, J.R.; Dearden, D.V. 
+Isotopic Composition and Exact Masses of Single Isotopic 
+Peaks. J. Am. Soc. Mass Spectrom. 2003, 15, 12-21
+
+
+Build instructions:
+-------------------
+
+In Linux/Unix systems with gcc and gnu make, type "make".
+In Microsoft Windows systems with Visual Studio 7.0 or greater, open
+the project file emass.vcproj from Visual Studio and select build
+solution from build -menu.
+
+
+Using:
+------
+
+Program qmass reads the isotope distributions of elements from a file
+called "ISOTOPE.DAT", which must reside in the directory where the
+program is started.
+
+The program takes the molecular formula and optionally the charge of
+the molecule from standard input. The charge must be separated from 
+the formula by a comma. The program prints the masses and intensities 
+of the isotopic peaks to the standard output. The molecular formula 
+may contain parentheses and spaces. 
+
+Examples of valid inputs:
+
+H2O
+CH3 (CH2)5 COO, -1
+HOCH2 HCNH3, 1
+
+To quit the program when using it interactively, press ctrl-d (in
+Linux systems) or ctrl-z (in ms Windows systems).
+
+
+Command line options:
+---------------------
+-l         The pruning limit, default 0
+-d         Number of significant digits in the output, default 6

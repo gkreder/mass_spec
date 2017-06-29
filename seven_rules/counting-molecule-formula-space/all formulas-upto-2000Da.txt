@@ -1,0 +1,510 @@
+Maximum number of molecular formulas < 2000 Da
+This output is calulated for maximum valence values:
+C - 4
+H - 1
+O - 2
+N - 3,5
+P - 3,5
+S - 2,4,6
+
+*****************************************************************************
+CH
+hr2 -c "test" -m 1 -t 2000000  -C 1-170 -H 1-250 -N 0-0 -O 0-0 -P 0-0 -S 0-0
+11832 formulas found in      1 seconds..
+*****************************************************************************
+
+MAXIMUM CH
+12033 formulas found in      1 seconds..
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-0 -O 0-0 -P 0-0 -S 0-0
+*****************************************************************************
+
+CHO
+487061 formulas found in      3 seconds..
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-0 -O 0-80 -P 0-0 -S 0-0
+*****************************************************************************
+
+MAXIMUM CHO
+C1.H4.O124.		0.0	1999.4007	-1998400.7 mmu
+510540 formulas found in      4 seconds..
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-0 -O 0-124 -P 0-0 -S 0-0
+*****************************************************************************
+
+MAXIMUM CHN
+C1.H3.N141.		71.0	1989.4569	-1988456.9 mmu
+1152681 formulas found in      7 seconds..
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-0 -P 0-0 -S 0-0 >CHN.txt
+
+*****************************************************************************
+CHN
+384556 formulas found in      2 seconds..
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-30 -O 0-0 -P 0-0 -S 0-0 >CHN3.txt
+*****************************************************************************
+
+Maximum CHS
+421445 formulas found in      3 seconds..
+C1.H2.S62.		1.0	1996.2840	-1995284.0 mmu
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-0 -O 0-0 -P 0-0 -S 0-62 >CHS2.txt
+
+*****************************************************************************
+
+MAXIMUM CHP
+401544 formulas found in      2 seconds..
+C1.H2.P64.		33.0	1996.3364	-1995336.4 mmu
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-0 -O 0-0 -P 0-64 -S 0-0 >CHP.txt
+
+*****************************************************************************
+
+MAXIMUM CHNOPS (<2000 Da)
+hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62 >CHNOPS2000.txt
+
+
+*****************************************************************************
+
+*****************************************************************************
+hr2-ok -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16 >CHNOPS500-all.txt
+1594185 formulas found in     79 seconds.
+P-valaence=3, S-valence=2, N-valence=3
+*****************************************************************************
+*****************************************************************************
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16
+2707540 formulas found in     86 seconds..
+RDBs are overloaded to maximum valence values
+P-valaence=5, S-valence=6, N-valence=5
+*****************************************************************************
+hr2 -c "test" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+139,735,355 formulas found in   1289 seconds..
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+
+***changed variable definition to (long long) type***
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+-594157787 formulas found in  91473 seconds..
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+CHNOPS - 500 with HC ratio cutoff at   6
+
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16
+1962994 formulas found in     80 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+CHNOPS - 500 with no HC ratio cutoff at   6
+
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16 >CHNOPS-500-all-noCHratio.txt
+2707540 formulas found in     87 seconds.
+
+*****************************************************************************
+
+hr2 -c "test" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+136,087,892 formulas found in  17795 seconds.
+RDBs are overloaded to maximum valence values
+
+(this was a windows output run with all formulas ~5h)
+(test might be wrong)
+*****************************************************************************
+new version with normal restriction (no probability)
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16 >500CHNOPS-restricted.txt
+
+1,772,483 formulas found in     81 seconds.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+full element ratio check
+hr2 -c "test" -m 1 -t  500000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+1,772,483 formulas found in   1382 seconds.    (direct output see above faster version)
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+full element ratio check (OK!)
+
+hr2 -c "test" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+87,888,303 formulas found in  11285 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+full element ratio check
+hr2 -c "test" -m 1 -t  500000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+1,772,483 formulas found in   1382 seconds.    (direct output see above faster version)
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+hr2 -c "2000-no-restriction" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            2000-no-restriction
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+7,995,776,805 formulas found in 106392 seconds. (29h)
+RDBs are overloaded to maximum valence values
+
+// no elementratiocheck
+// but LEWIS check with maximum valences
+// number printout only
+*****************************************************************************
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "1000-no-restrictions" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+Text            1000-no-restrictions
+Composition     C:1-83 H:1-144 N:0-70 O:0-61 P:0-31 S:0-30
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+139,735,355 formulas found in   1278 seconds.
+RDBs are overloaded to maximum valence values
+// no elementratiocheck
+// but LEWIS check with maximum valences
+// number printout only
+*****************************************************************************
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "500-no-restrictions" -m 1 -t  500000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+Text            500-no-restrictions
+Composition     C:1-83 H:1-144 N:0-70 O:0-61 P:0-31 S:0-30
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+2,707,540 formulas found in   1509 seconds.
+RDBs are overloaded to maximum valence values
+// no elementratiocheck
+// but LEWIS check with maximum valences
+// number printout only
+*****************************************************************************
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16>CHNOPS-res-500.txt
+
+
+729617 formulas found in     75 seconds.
+RDBs are overloaded to maximum valence values
+
+// elementratiocheck + probabilitycheck
+// LEWIS check with maximum valences
+
+*****************************************************************************
+hr2 -c "1000-all-restrictions" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30 >1000-all.txt
+
+34,987,559 formulas found in   1446 seconds
+
+// elementratiocheck + probabilitycheck
+// LEWIS check with maximum valences
+// file deleted see STA file 1000-all.sta
+*****************************************************************************
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16>CHNOPS-res-500-extreme.txt
+
+729,595 formulas found in     76 seconds.
+RDBs are overloaded to maximum valence values
+
+// elementratiocheck + probabilitycheck + element count check
+// LEWIS check with maximum valences
+*****************************************************************************
+
+hr2 -c "1000-all-restrictions" -m 1 -t  1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30 >1000-all.txt
+
+32,555,050 formulas found in   1426 seconds.
+RDBs are overloaded to maximum valence values
+
+// elementratiocheck + probabilitycheck +  element count check
+// LEWIS check with maximum valences
+
+*****************************************************************************
+hr2 -c "test" -m 1 -t  500000  -C 1-50 -H 1-180 -N 0-36 -O 0-31 -P 0-16 -S 0-16>CHNOPS-res-500-OK.txt
+
+729,595 formulas found in     75 seconds.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+
+hr2-ratio-only-count -c "2000" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+4,926,973,096 formulas found in  99002 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+
+
+hr2-all-res-count -c "2000" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+1,170,870,061 formulas found in  90926 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+*****************************************************************************
+with restreicted element counts
+hr2-all-res-count -c "500" -m 1 -t 500000  -C 1-50 -H 1-150 -N 0-18 -O 0-30 -P 0-9 -S 0-12
+
+722,065 formulas found in     19 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+hr2-all-res-count -c "1000" -m 1 -t 1000000  -C 1-90 -H 1-198 -N 0-30 -O 0-80 -P 0-9 -S 0-12
+
+31,038,423 formulas found in    200 seconds.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+hr2-all-res-count -c "2000" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-30 -O 0-80 -P 0-12 -S 0-9
+
+559,371,003 formulas found in    845 seconds.
+RDBs are overloaded to maximum valence values
+
+******************************************************************************
+
+hr2-all-res -C "Digitoxin" -m 764.435802 -t 2 -C 1-166 -H 1-286 -N 0-30 -O 0-80 -P 0-12 -S 0-9
+
+##############################################################################
+HR2 FAST and new implementation
+##############################################################################
+
+
+
+
+HR2-all-res-fast
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "test" -m 1 -t 500000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+724,901 formulas found in      1 seconds by evaluating 12,861,606 formulae.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+HR2-all-res-fast
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "test" -m 1 -t 1000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+32,346,398 formulas found in     46 seconds by evaluating 566,537,598 formulae.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+ 
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2 -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+1,170,870,061 formulas found in   1871 seconds by evaluating 22,461,375,052 formulae.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+*****************************************************************************
+HR2-ALL-res-fast
+----->2000 Da, based on DNP
+
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2-fast-all-res-count -c "2000-element-restriction" -m 1 -t 2000000  -C 1-116 -H 1-237 -N 0-33 -O 0-64 -P 0-7 -S 0-9
+
+Text            2000-element-restriction
+Composition     C:1-116 H:1-237 N:0-33 O:0-64 P:0-7 S:0-9
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+461,405,556 formulas found in    296 seconds by evaluating 3,042,817,555 formulae.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+HR2-ALL-res-fast
+----->1000 Da, based on DNP
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2-fast-all-res-count -c "1000-element-restriction" -m 1 -t 1000000  -C 1-67 -H 1-127 -N 0-26 -O 0-28 -P 0-7 -S 0-9
+
+Text            2000-element-restriction
+Composition     C:1-67 H:1-127 N:0-26 O:0-28 P:0-7 S:0-9
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+27,355,735 formulas found in     17 seconds by evaluating 187,306,880 formulae.
+RDBs are overloaded to maximum valence values
+
+*****************************************************************************
+
+HR2-ALL-res-fast
+----->500 Da, based on DNP
+
+
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>hr2-fast-all-res-count -c "500-element-restriction" -m 1 -t 500000  -C 1-30 -H 1-73 -N 0-11 -O 0-19 -P 0-5 -S 0-8
+
+Text            500-element-restriction
+Composition     C:1-30 H:1-73 N:0-11 O:0-19 P:0-5 S:0-8
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+654,737 formulas found in      0 seconds by evaluating 5,635,783 formulae.
+RDBs are overloaded to maximum valence values
+*****************************************************************************
+*****************************************************************************
+
+FOLLOWING just on full element counts (commas are manuall introduced)
+*****************************************************************************
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement>hr2-fast-all-res-count -c "test" -m 1 -t 2000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+1,170,870,061 formulas found in   1871 seconds by evaluating 22,461,375,052 formulae.
+RDBs are overloaded to maximum valence values
+-------------------------------------------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement>hr2-fast-all-res-count -c "test" -m 1 -t 1000000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+32,346,398 formulas found in     46 seconds by evaluating 566,537,598 formulae.
+RDBs are overloaded to maximum valence values
+------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement>hr2-fast-all-res-count -c "test" -m 1 -t 1000000  -C 1-83 -H 1-144 -N 0-70 -O 0-61 -P 0-31 -S 0-30
+
+Text            test
+Composition     C:1-83 H:1-144 N:0-70 O:0-61 P:0-31 S:0-30
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+32,346,046 formulas found in     33 seconds by evaluating 392,579,894 formulae.
+RDBs are overloaded to maximum valence values
+
+-------------------------------------------------
+***this is with exceeding element counts - see correct version above***
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement>hr2-fast-all-res-count -c "test" -m 1 -t 500000  -C 1-166 -H 1-286 -N 0-141 -O 0-124 -P 0-64 -S 0-62
+
+Text            test
+Composition     C:1-166 H:1-286 N:0-141 O:0-124 P:0-64 S:0-62
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+724,901 formulas found in      1 seconds by evaluating 12,861,606 formulae.
+RDBs are overloaded to maximum valence values
+----------------------------------------------------------------------------
+****************************************************************************
+****************************************************************************
+NOW on the maximum values from DNP and WILEY (element selected which is higher)
+
+Mass Range
+[Da]	LIB	C	H	N	O	P	S	F	Cl	Br	Si
+<500	DNP	29	72	10	18	4	7	15	8	5	
+	Wiley	39	72	20	20	9	10	16	10	4	8
+
+<1000	DNP	66	126	25	27	6	8	16	11	8	
+	Wiley	78	126	20	27	9	14	34	12	8	14
+
+<2000	DNP	115	236	32	63	6	8	16	11	8 	
+	Wiley	156	180	20	40	9	14	48	12	10	15
+
+<3000	DNP	162	208	48	78	6	9	16	11	8	
+
+----------------------------------------------------------------------------
+<500 Da
+hr2-fast-all-res-count -c "test" -m 1 -t 500000  -C 1-39 -H 1-72 -N 0-20 -O 0-20 -P 0-9 -S 0-10
+<1000 Da
+hr2-fast-all-res-count -c "test" -m 1 -t 1000000  -C 1-78 -H 1-126 -N 0-25 -O 0-27 -P 0-9 -S 0-14
+<2000 Da
+hr2-fast-all-res-count -c "test" -m 1 -t 2000000  -C 1-156 -H 1-236 -N 0-32 -O 0-63 -P 0-9 -S 0-14
+<3000 Da
+hr2-fast-all-res-count -c "test" -m 1 -t 3000000  -C 1-162 -H 1-236 -N 0-48 -O 0-78 -P 0-9 -S 0-14
+
+----------------------------------------------------------------------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement\HR2-formula-generator>hr2-fast-all-res-count -c "test" -m 1 -t 500000  -C 1-39 -H 1-72 -N 0-20 -O 0-20 -P 0-9 -S 0-10
+
+Text            test
+Composition     C:1-39 H:1-72 N:0-20 O:0-20 P:0-9 S:0-10
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+724,270 formulas found in      0 seconds by evaluating 7304474 formulae.
+RDBs are overloaded to maximum valence values
+----------------------------------------------------------------------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement\HR2-formula-generator>hr2-fast-all-res-count -c "test" -m 1 -t 1000000  -C 1-78 -H 1-126 -N 0-25 -O 0-27 -P 0-9 -S 0-14
+
+Text            test
+Composition     C:1-78 H:1-126 N:0-25 O:0-27 P:0-9 S:0-14
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+30,077,741 formulas found in     23 seconds by evaluating 240065734 formulae.
+RDBs are overloaded to maximum valence values
+
+----------------------------------------------------------------------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement\HR2-formula-generator>hr2-fast-all-res-count -c "test" -m 1 -t 2000000  -C 1-156 -H 1-236 -N 0-32 -O 0-63 -P 0-9 -S 0-14
+
+Text            test
+Composition     C:1-156 H:1-236 N:0-32 O:0-63 P:0-9 S:0-14
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+623,270,049 formulas found in    455 seconds by evaluating 4899772948 formulae.
+RDBs are overloaded to maximum valence values
+
+----------------------------------------------------------------------------
+D:\Opteron-Saver\7-golden-rules\doc\firstrevision-to-Oliver\supplement\HR2-formula-generator>hr2-fast-all-res-count -c "test" -m 1 -t 3000000  -C 1-162 -H 1-236 -N 0-48 -O 0-78 -P 0-9 -S 0-14
+
+Text            test
+Composition     C:1-162 H:1-236 N:0-48 O:0-78 P:0-9 S:0-14
+Tol (mmu)       3000000.0
+Measured        1.0000
+Charge          +0.0
+
+2,457,355,917 formulas found in   1738 seconds by evaluating 17183236344 formulae.
+RDBs are overloaded to maximum valence values
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+FOR N=3 in purely organic compounds
+----------------------------------------------------------------------------
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>HR2 -c "test" -m 1 -t 500000  -C 1-39 -H 1-72 -N 0-20 -O 0-20 -P 0-9 -S 0-10
+
+Text            test
+Composition     C:1-39 H:1-72 N:0-20 O:0-20 P:0-9 S:0-10
+Tol (mmu)       500000.0
+Measured        1.0000
+Charge          +0.0
+
+710,889 formulas found in      0 seconds by evaluating 7304474 formulae.
+RDBs are overloaded to maximum valence values (valence(N)=3)
+----------------------------------------------------------------------------
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>HR2 -c "test" -m 1 -t 1000000  -C 1-78 -H 1-126 -N 0-25 -O 0-27 -P 0-9 -S 0-14
+
+Text            test
+Composition     C:1-78 H:1-126 N:0-25 O:0-27 P:0-9 S:0-14
+Tol (mmu)       1000000.0
+Measured        1.0000
+Charge          +0.0
+
+29,454,924 formulas found in     22 seconds by evaluating 240065734 formulae.
+RDBs are overloaded to maximum valence values
+
+----------------------------------------------------------------------------
+
+C:\chemistry\elementalcomposition\hr-vc\HR2\release>HR2 -c "test" -m 1 -t 2000000  -C 1-156 -H 1-236 -N 0-32 -O 0-63 -P 0-9 -S 0-14
+
+Text            test
+Composition     C:1-156 H:1-236 N:0-32 O:0-63 P:0-9 S:0-14
+Tol (mmu)       2000000.0
+Measured        1.0000
+Charge          +0.0
+
+597,698,492 formulas found in    462 seconds by evaluating 4899772948 formulae.
+RDBs are overloaded to maximum valence values
