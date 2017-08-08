@@ -2,6 +2,7 @@ import sys
 import os
 import pandas as pd
 import time
+import math
 start_time = time.time()
 
 if len(sys.argv) <= 1:
@@ -12,8 +13,11 @@ if len(sys.argv) <= 1:
 			--trans_file (-t):
 				path to chemical transformations file
 		OPTIONAL ARGUMENTS:
-			--task:
-				task_number (integer) for cluster parallel jobs (e.g. via SGE_TASK_ID variable)
+			--current_task + --num_tasks:
+				Must be used together, task_number (integer) for cluster parallel jobs (e.g. via SGE_TASK_ID variable) 
+				and total numbero of tasks. If not passed, will default to running single job on the whole file 
+				(this takes a very long time, maybe close to 48 hours and may exceed cluster/computer memory allocations).
+				NOTE: task numbers start at 1
 			--tolerance:
 				tolerance (in m/z units, float) for difference between chemical transformation
 				delta_m/z and observed delta_m/z. Defaults to 0.1
@@ -22,12 +26,12 @@ if len(sys.argv) <= 1:
 
 		EXAMPLE CALL:
 			python find_transformation_matches.py --in_file /path/to/input.txt --trans_file /path/to/transformations.xlsx --task 2 --tolerance 0.01
-
 		''')
 
 TOLERANCE = 0.1
 found_input_file = False
 found_trans_file = False
+tasks = False
 out_file = 'transformation_matches.csv'
 for i, arg in enumerate(sys.argv):
 	if arg == '--tolerance':
@@ -35,11 +39,18 @@ for i, arg in enumerate(sys.argv):
 			TOLERANCE = float(sys.argv[i + 1])
 		else:
 			sys.exit('Error: hanging --tolerance flag in call')
-	if arg == '--task':
+	if arg == '--current_task':
 		if len(sys.argv) > i + 1:
+			tasks = True
 			task_num = int(sys.argv[i + 1])
 		else:
-			sys.exit('Error: hanging --task flag in call')
+			sys.exit('Error: hanging --current_task flag in call')
+	if arg == '--num_tasks':
+		if len(sys.argv) > i + 1:
+			tasks = True
+			num_tasks = int(sys.argv[i + 1])
+		else:
+			sys.exit('Error: hanging --num_tasks flag in call')
 	if arg == '--in_file' or arg == '-i':
 		if len(sys.argv) > i + 1:
 			found_input_file = True
@@ -62,19 +73,21 @@ if not found_input_file:
 	sys.exit('Error: Must specify an input file using --in_file or -f flag')
 if not found_trans_file:
 	sys.exit('Error: Must specify a chemical transformations file using --trans_file or -t flag')
-
-
-# # os.chdir('../data/HirschhornLab_MetabolomicsData/')
-# # mzrt_files = [x for x in os.listdir() if '.MzRtInfo.txt' in x]
-# BioAge_file = '/Users/student/mass_spec/data/HirschhornLab_MetabolomicsData/BioAge_spQC_miss0.5.MzRtInfo.txt'
-# MCDS_file = '/Users/student/mass_spec/data/HirschhornLab_MetabolomicsData/MCDS_spQC_miss0.5.MzRtInfo.txt'
-# OE_file = '/Users/student/mass_spec/data/HirschhornLab_MetabolomicsData/OE_spQC_miss0.25.MzRtInfo.txt'
+if not tasks:
+	print('Warning: Running without task parallelization - this may take more than 48 hours. Recommend using --current_task/--num_tasks flag')
+elif tasks:
+	if not ('--num_tasks' in sys.argv and '--current_task' in sys.argv):
+		sys.exit('Error: If using tasks, must specify both --num_tasks and --current_task')
+	if task_num > num_tasks:
+		sys.exit('Error: Current task number cannot be greater than total number of tasks')
+	if task_num <= 0:
+		sys.exit('Error: Task numbers must be greater than or equal to 1')
 
 
 current_file = input_file
-df_trans = pd.read_excel(trans_file, sheetname = 'Common chemical relationships')
 
 # Matrix of chemical transformations
+df_trans = pd.read_excel(trans_file, sheetname = 'Common chemical relationships')
 # df_trans = pd.read_excel('/Users/student/mass_spec/data/transformations.xlsx', sheetname = 'Common chemical relationships')
 df_trans = df_trans.drop(0)
 df_trans.set_index('Element', inplace = True)
@@ -85,11 +98,6 @@ df_trans_mz.rename(columns = {'Δm/z' : 'delta_mz'}, inplace = True)
 df_trans_mz = df_trans_mz.sort_values('delta_mz')
 max_diff = max(abs(df_trans_mz['delta_mz'].values))
 
-
-
-
-
-
 df_current = pd.DataFrame.from_csv(current_file, sep = '\t')
 df_current = df_current.sort_values('m.z')
 metabolites = df_current.index.values
@@ -99,10 +107,18 @@ metabolites = df_current.index.values
 # only within mz range as determined by the max possible mz difference dictated by
 # the chemical transformation list
 print_rows = []
-out_cols = ['possible_transformation','transformation_diff_abs','delta_mz','method_1', 'mz_1', 'rt_1', 'method_2', 'mz_2', 'rt_2']
+out_cols = ['metabolites','possible_transformation','transformation_diff_abs','delta_mz','method_1', 'mz_1', 'rt_1', 'method_2', 'mz_2', 'rt_2']
 print_rows.append(','.join(out_cols))
-# for index, metabolite in enumerate(metabolites):
-current_range = range(0, 1)
+
+if not tasks:
+	current_range = range(0, len(metabolites))
+else:
+	increment = math.ceil(len(metabolites) / num_tasks)
+	start_range = (task_num - 1) * increment
+	end_range = task_num * increment
+	end_range = min(end_range, len(metabolites))
+	current_range = range(start_range, end_range)
+
 for index in current_range:
 	metabolite = metabolites[index]
 	current_mz = df_current['m.z'][metabolite]
@@ -152,13 +168,11 @@ for index in current_range:
 		current_delta_mz = df_slice.loc[mapping]['delta_mz']
 		for transformation in df_trans_mz.index:
 			if (abs(df_trans_mz.loc[transformation]['delta_mz'] - current_delta_mz)) <= TOLERANCE:
-				row = transformation + ',' + str(abs(df_trans_mz.loc[transformation]['delta_mz'] - current_delta_mz)) + ','
+				row = mapping + ',' + transformation + ',' + str(abs(df_trans_mz.loc[transformation]['delta_mz'] - current_delta_mz)) + ','
 				for value in df_slice.loc[mapping].values:
 					row += str(value) + ','
 				row = row[ : -1]
 				print_rows.append(row)
-
-
 
 
 with open(out_file, 'w') as f:
