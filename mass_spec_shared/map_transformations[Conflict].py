@@ -18,23 +18,33 @@ if '-t' in sys.argv:
 	else:
 		TOLERANCE = float(sys.argv[sys.argv.index("-t") + 1])
 
-if '-task' in sys.argv:
-	if sys.argv.index("-task") == len(sys.argv) - 1:
-		sys.exit("Error: -task flag passed without argument")
+tasks = False
+if '--task' in sys.argv:
+	if sys.argv.index("--task") == len(sys.argv) - 1:
+		sys.exit("Error: --task flag passed without argument")
 	else:
 		tasks = True
-		task_num = int(sys.argv[sys.argv.index("-task") + 1])
+		task_num = int(sys.argv[sys.argv.index("--task") + 1])
+
+test_run = False
+if '--test' in sys.argv:
+	test_run = True
 
 def write_cyto_csv(df_data, fname_out):
 	print("")
-	print("Starting " + fname_out + " at " + datetime.datetime.now())
+	print("Starting " + fname_out + " at " + str(datetime.datetime.now()))
 	df_diffs = pd.DataFrame()
 	df_diffs_temp = pd.DataFrame()
 	df_diffs = pd.DataFrame(df_data['m.z'].copy())
 	df_diffs_temp = df_diffs.copy()
 	
-	for i in range(df_diffs.shape[0]):
+	if test_run:
+		loop_range = range(0, 30)
+	else:
+		loop_range = range(df_diffs.shape[0])
+	# for i in range(df_diffs.shape[0]):
 	# for i in range(0, 5):
+	for i in loop_range:
 	    kwargs = {df_data['m.z'].index[i] : lambda df : df['m.z']}
 	    kwargs_temp = {df_data['m.z'].index[i] : lambda df : np.repeat(df['m.z'][i], df['m.z'].shape[0])}
 	    df_diffs = df_diffs.assign(**kwargs)
@@ -45,7 +55,7 @@ def write_cyto_csv(df_data, fname_out):
 	df_list = []
 	for i in range(len(df_diffs.columns)):
 	    diff_col = df_diffs[df_diffs.index[i]]
-	    index = pd.Index([x + ' - ' + df_diffs.index[i] for x in diff_col.index], name = 'Transformation')
+	    index = pd.Index([x + '*****' + df_diffs.index[i] for x in diff_col.index], name = 'Transformation')
 	    columns = df_trans_mz.index
 	    df_mask = pd.DataFrame(np.isclose(diff_col.values[ : , None], df_trans_mz.values.transpose(), atol=TOLERANCE), 
 	                           index = index, columns = columns)
@@ -57,7 +67,7 @@ def write_cyto_csv(df_data, fname_out):
 	    # pd.DataFrame(np.isclose(df_diffs['1'].values[:, None], df_trans_test.values.transpose(), atol=1.0))
 	df_sum = df_mask.sum(axis = 1)
 	df_found = pd.DataFrame(df_sum[df_sum > 0], columns = ['Number Hits'])
-	df_found = df_found[df_found.index.map(lambda x : x.split(' - ')[0] != x.split(' - ')[1])]
+	df_found = df_found[df_found.index.map(lambda x : x.split('*****')[0] != x.split('*****')[1])]
 	df_weights = pd.DataFrame(float('nan'), index = df_diffs.index, columns = df_diffs.columns)
 
 	for transformation in df_found.index:
@@ -65,8 +75,8 @@ def write_cyto_csv(df_data, fname_out):
 	    df_trans_mz.loc[reaction]
 
 	    # transformation_1 - transformation_2
-	    transformation_1 = transformation.split(' - ')[0]
-	    transformation_2 = transformation.split(' - ')[1]
+	    transformation_1 = transformation.split('*****')[0]
+	    transformation_2 = transformation.split('*****')[1]
 	    diff = df_diffs[transformation_2][transformation_1]
 	    reaction_diff = df_trans_mz.loc[reaction]
 	    weight = abs(diff - reaction_diff).values[0]
@@ -78,7 +88,7 @@ def write_cyto_csv(df_data, fname_out):
 	df_cyto.to_csv(fname_out + '.csv', index = False)
 	df_cyto_pruned = df_cyto[df_cyto['Weight'] != 0.0]
 	df_cyto_pruned.to_csv(fname_out + '_pruned.csv', index = False)
-	print("...Finished at" + datetime.datetime.now())
+	print("...Finished at" + str(datetime.datetime.now()))
 
 
 
@@ -102,10 +112,9 @@ if __name__ == '__main__':
 
 	if not tasks:
 		write_cyto_csv(df_b, 'BioAge')
-		write_cyto_csv(df_b, 'MCDS')
-		write_cyto_csv(df_b, 'OE')
+		write_cyto_csv(df_m, 'MCDS')
+		write_cyto_csv(df_o, 'OE')
 	else:
-		
-
-
-		
+		df_files = [df_b, df_m, df_o]
+		names_out = ['BioAge', 'MCDS', 'OE']
+		write_cyto_csv(df_files[task_num - 1], names_out[task_num - 1])

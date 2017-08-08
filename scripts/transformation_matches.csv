@@ -1,0 +1,2 @@
+possible_transformation,transformation_diff_abs,delta_mz,method_1,mz_1,rt_1,method_2,mz_2,rt_2
+COOH → CONH2,0.03638441747,-1.0204,HILIC-pos,70.0659,9.34,HILIC-pos,71.0863,1.63
