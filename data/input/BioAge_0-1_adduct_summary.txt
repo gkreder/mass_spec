@@ -1,0 +1,17 @@
+-----------------------------------------------------------
+Input file --- data/input/BioAge_MzRtInfo.txt
+System Call --- fast_fragments.py --test data/input/BioAge_MzRtInfo.txt
+Tolerance (rt) --- 0.1
+-----------------------------------------------------------
+*Total*
+Total Metabolites (no NA) --- 500
+Total found adducts --- 3702
+
+*HILIC-pos*
+Number metabolites (HILIC-pos) --- 192
+Found adducts (HILIC-pos) --- 552
+
+*C18-neg*
+Number metabolites (C18-neg) --- 305
+Found adducts (C18-neg) --- 3150
+

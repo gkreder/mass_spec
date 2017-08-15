@@ -18,8 +18,8 @@ in_folder = top_dir + sys.argv[-1]
 
 ################################################################################
 os.chdir(in_folder)
-in_files = [x for x in os.listdir() if x[0] != '.' and '.csv' in x \
-	and 'merged' not in x]
+in_files = [x for x in os.listdir() if x[0] != '.' \
+	and '_transformations.csv' in x and 'merged' not in x]
 cohort_data = {}
 
 # Grab all cohort names and save header
