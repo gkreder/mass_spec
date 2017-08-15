@@ -1,0 +1,277 @@
+transformation,closest_reaction,delta_mz_observed,delta_mz_error,metabolite_from,mz_from,rt_from,metabolite_to,mz_to,rt_to,method
+propionate--->lactate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,propionate,73.0295,3.9,lactate,89.0244,3.85,HILIC-neg
+propionate--->isovaleric_acid,Ethylation,28.0313,1.289200000087476e-07,propionate,73.0295,3.9,isovaleric_acid,101.0608,3.55,HILIC-neg
+propionate--->alpha-ketoisovalerate,Acetylation,42.0106,3.5315979999950287e-05,propionate,73.0295,3.9,alpha-ketoisovalerate,115.0401,3.4,HILIC-neg
+propionate--->succinate,Carboxylation,43.9898,2.9239119996304908e-05,propionate,73.0295,3.9,succinate,117.0193,6.9,HILIC-neg
+propionate--->N-acetyl-L-alanine,Glycine conjugation,57.02149999999999,3.627894999169712e-05,propionate,73.0295,3.9,N-acetyl-L-alanine,130.051,3.9,HILIC-neg
+pyruvate--->lactate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,pyruvate,87.0088,4.8,lactate,89.0244,3.85,HILIC-neg
+pyruvate--->malonate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,pyruvate,87.0088,4.8,malonate,103.0037,5,HILIC-neg
+pyruvate--->glyceric_acid,Hydration,18.010500000000008,6.468401999271123e-05,pyruvate,87.0088,4.8,glyceric_acid,105.0193,4.1,HILIC-neg
+pyruvate--->fumarate/maleate,Formylation,27.9949,1.4619559998152454e-05,pyruvate,87.0088,4.8,fumarate/maleate,115.0037,7.05,HILIC-neg
+pyruvate--->alpha-ketoisovalerate,Ethylation,28.0313,1.289200000087476e-07,pyruvate,87.0088,4.8,alpha-ketoisovalerate,115.0401,3.4,HILIC-neg
+pyruvate--->PEP,Phosphorylation,79.9663,3.052090998778567e-05,pyruvate,87.0088,4.8,PEP,166.9751,9.5,HILIC-neg
+oxalate--->malonate,Methylation,14.015699999999995,4.993553999455003e-05,oxalate,88.988,7.4,malonate,103.0037,5,HILIC-neg
+oxalate--->succinate,Ethylation,28.0313,1.289200000087476e-07,oxalate,88.988,7.4,succinate,117.0193,6.9,HILIC-neg
+propionate--->lactate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,propionate,73.0295,3.9,lactate,89.0244,3.85,HILIC-neg
+pyruvate--->lactate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,pyruvate,87.0088,4.8,lactate,89.0244,3.85,HILIC-neg
+lactate--->alpha-hydroxybutyrate/beta-hydroxybutyrate,Methylation,14.015699999999995,4.993553999455003e-05,lactate,89.0244,3.85,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,HILIC-neg
+lactate--->glyceric_acid,Hydroxylation,15.994900000000001,1.4619559998152454e-05,lactate,89.0244,3.85,glyceric_acid,105.0193,4.1,HILIC-neg
+lactate--->succinate,Formylation,27.9949,1.4619559998152454e-05,lactate,89.0244,3.85,succinate,117.0193,6.9,HILIC-neg
+lactate--->malate,Carboxylation,43.98979999999999,2.9239120010515762e-05,lactate,89.0244,3.85,malate,133.0142,6.95,HILIC-neg
+lactate--->glutamate_HILIC-neg,Glycine conjugation,57.02149999999999,3.627894999169712e-05,lactate,89.0244,3.85,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+lactate--->DHAP/glyceraldehyde_3P,Phosphorylation,79.9663,3.052090998778567e-05,lactate,89.0244,3.85,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+lactate--->aconitate,Malonylation,83.98479999999999,5.614132000175687e-05,lactate,89.0244,3.85,aconitate,173.0092,9.1,HILIC-neg
+propionate--->isovaleric_acid,Ethylation,28.0313,1.289200000087476e-07,propionate,73.0295,3.9,isovaleric_acid,101.0608,3.55,HILIC-neg
+isovaleric_acid--->alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,Formylation,27.9949,1.4619559998152454e-05,isovaleric_acid,101.0608,3.55,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,HILIC-neg
+isovaleric_acid--->adipate,Carboxylation,43.9898,2.9239119996304908e-05,isovaleric_acid,101.0608,3.55,adipate,145.0506,6.8,HILIC-neg
+pyruvate--->malonate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,pyruvate,87.0088,4.8,malonate,103.0037,5,HILIC-neg
+oxalate--->malonate,Methylation,14.015699999999995,4.993553999455003e-05,oxalate,88.988,7.4,malonate,103.0037,5,HILIC-neg
+malonate--->glyceric_acid,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,malonate,103.0037,5,glyceric_acid,105.0193,4.1,HILIC-neg
+malonate--->succinate,Methylation,14.015600000000006,5.0064459994558774e-05,malonate,103.0037,5,succinate,117.0193,6.9,HILIC-neg
+malonate--->alpha-ketoglutarate,Acetylation,42.01049999999999,6.468402000336937e-05,malonate,103.0037,5,alpha-ketoglutarate,145.0142,7.35,HILIC-neg
+lactate--->alpha-hydroxybutyrate/beta-hydroxybutyrate,Methylation,14.015699999999995,4.993553999455003e-05,lactate,89.0244,3.85,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-hydroxy-3-methylpentanoic_acid,Ethylation,28.031300000000016,1.2891998579789288e-07,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->adipate,Acetylation,42.01050000000001,6.468401998915851e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,adipate,145.0506,6.8,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-hydroxyglutarate,Carboxylation,43.9898,2.9239119996304908e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-hydroxyglutarate,147.0299,7,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->gentisate,Glycine → Taurine,49.97919999999999,0.0034356840200047145,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,gentisate,153.0193,4.6,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-aminoadipate,Glycine conjugation,57.0214,6.372104999741168e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-aminoadipate,160.0615,5.25,HILIC-neg
+pyruvate--->glyceric_acid,Hydration,18.010500000000008,6.468401999271123e-05,pyruvate,87.0088,4.8,glyceric_acid,105.0193,4.1,HILIC-neg
+lactate--->glyceric_acid,Hydroxylation,15.994900000000001,1.4619559998152454e-05,lactate,89.0244,3.85,glyceric_acid,105.0193,4.1,HILIC-neg
+malonate--->glyceric_acid,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,malonate,103.0037,5,glyceric_acid,105.0193,4.1,HILIC-neg
+glyceric_acid--->malate,Formylation,27.994899999999987,1.4619560012363308e-05,glyceric_acid,105.0193,4.1,malate,133.0142,6.95,HILIC-neg
+glyceric_acid--->2-hydroxyglutarate,Acetylation,42.0106,3.5315979999950287e-05,glyceric_acid,105.0193,4.1,2-hydroxyglutarate,147.0299,7,HILIC-neg
+glyceric_acid--->2-phosphoglycerate,Phosphorylation,79.96640000000001,6.947909001553398e-05,glyceric_acid,105.0193,4.1,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+glyceric_acid--->3-phosphoglycerate,Phosphorylation,79.96640000000001,6.947909001553398e-05,glyceric_acid,105.0193,4.1,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+glyceric_acid--->inosine_HILIC-neg,Glucosylation,162.05420000000004,0.0013765799000395873,glyceric_acid,105.0193,4.1,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+uracil--->thymine,Methylation,14.01570000000001,4.993554000876088e-05,uracil,111.02,1.5,thymine,125.0357,1.35,HILIC-neg
+uracil--->methylcysteine,Tyr → Trp,23.0081,0.007884417470002347,uracil,111.02,1.5,methylcysteine,134.0281,3.45,HILIC-neg
+pyruvate--->fumarate/maleate,Formylation,27.9949,1.4619559998152454e-05,pyruvate,87.0088,4.8,fumarate/maleate,115.0037,7.05,HILIC-neg
+fumarate/maleate--->succinate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,fumarate/maleate,115.0037,7.05,succinate,117.0193,6.9,HILIC-neg
+fumarate/maleate--->malate,Hydration,18.010499999999993,6.468402000692208e-05,fumarate/maleate,115.0037,7.05,malate,133.0142,6.95,HILIC-neg
+propionate--->alpha-ketoisovalerate,Acetylation,42.0106,3.5315979999950287e-05,propionate,73.0295,3.9,alpha-ketoisovalerate,115.0401,3.4,HILIC-neg
+pyruvate--->alpha-ketoisovalerate,Ethylation,28.0313,1.289200000087476e-07,pyruvate,87.0088,4.8,alpha-ketoisovalerate,115.0401,3.4,HILIC-neg
+alpha-ketoisovalerate--->alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,Methylation,14.015600000000006,5.0064459994558774e-05,alpha-ketoisovalerate,115.0401,3.4,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,HILIC-neg
+propionate--->succinate,Carboxylation,43.9898,2.9239119996304908e-05,propionate,73.0295,3.9,succinate,117.0193,6.9,HILIC-neg
+oxalate--->succinate,Ethylation,28.0313,1.289200000087476e-07,oxalate,88.988,7.4,succinate,117.0193,6.9,HILIC-neg
+lactate--->succinate,Formylation,27.9949,1.4619559998152454e-05,lactate,89.0244,3.85,succinate,117.0193,6.9,HILIC-neg
+malonate--->succinate,Methylation,14.015600000000006,5.0064459994558774e-05,malonate,103.0037,5,succinate,117.0193,6.9,HILIC-neg
+fumarate/maleate--->succinate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,fumarate/maleate,115.0037,7.05,succinate,117.0193,6.9,HILIC-neg
+succinate--->malate,Hydroxylation,15.994899999999987,1.4619560012363308e-05,succinate,117.0193,6.9,malate,133.0142,6.95,HILIC-neg
+succinate--->erythronic_acid,Hydration,18.010599999999997,3.531597999639757e-05,succinate,117.0193,6.9,erythronic_acid,135.0299,4.4,HILIC-neg
+succinate--->hypoxanthine_HILIC-neg,Hydration,18.01190000000001,0.0013353159800111314,succinate,117.0193,6.9,hypoxanthine_HILIC-neg,135.0312,3.4,HILIC-neg
+succinate--->alpha-ketoglutarate,Formylation,27.994899999999987,1.4619560012363308e-05,succinate,117.0193,6.9,alpha-ketoglutarate,145.0142,7.35,HILIC-neg
+succinate--->adipate,Ethylation,28.0313,1.289200000087476e-07,succinate,117.0193,6.9,adipate,145.0506,6.8,HILIC-neg
+taurine_HILIC-neg--->thymine,C=O → CHNH2,1.0283000000000015,0.0033344819300005213,taurine_HILIC-neg,124.0074,3.6,thymine,125.0357,1.35,HILIC-neg
+taurine_HILIC-neg--->2-hydroxyglutarate,Tyr → Trp,23.022499999999994,0.006515582529992514,taurine_HILIC-neg,124.0074,3.6,2-hydroxyglutarate,147.0299,7,HILIC-neg
+taurine_HILIC-neg--->quinolinate,Acetylation,42.0072,0.003364684019999231,taurine_HILIC-neg,124.0074,3.6,quinolinate,166.0146,7.45,HILIC-neg
+uracil--->thymine,Methylation,14.01570000000001,4.993554000876088e-05,uracil,111.02,1.5,thymine,125.0357,1.35,HILIC-neg
+taurine_HILIC-neg--->thymine,C=O → CHNH2,1.0283000000000015,0.0033344819300005213,taurine_HILIC-neg,124.0074,3.6,thymine,125.0357,1.35,HILIC-neg
+thymine--->ascorbate,Glycine → Taurine,49.98909999999999,0.006464315979997082,thymine,125.0357,1.35,ascorbate,175.0248,8.5,HILIC-neg
+isovaleric_acid--->alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,Formylation,27.9949,1.4619559998152454e-05,isovaleric_acid,101.0608,3.55,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,HILIC-neg
+alpha-ketoisovalerate--->alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,Methylation,14.015600000000006,5.0064459994558774e-05,alpha-ketoisovalerate,115.0401,3.4,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,HILIC-neg
+alpha-keto-beta-methylvalerate/alpha-ketoisocaproate--->2-hydroxy-3-methylpentanoic_acid,Hydrogenation,2.0157000000000096,4.993554000964906e-05,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,HILIC-neg
+alpha-keto-beta-methylvalerate/alpha-ketoisocaproate--->adipate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,adipate,145.0506,6.8,HILIC-neg
+propionate--->N-acetyl-L-alanine,Glycine conjugation,57.02149999999999,3.627894999169712e-05,propionate,73.0295,3.9,N-acetyl-L-alanine,130.051,3.9,HILIC-neg
+N-acetyl-L-alanine--->glutamate_HILIC-neg,Hydroxylation,15.994900000000001,1.4619559998152454e-05,N-acetyl-L-alanine,130.051,3.9,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-hydroxy-3-methylpentanoic_acid,Ethylation,28.031300000000016,1.2891998579789288e-07,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,HILIC-neg
+alpha-keto-beta-methylvalerate/alpha-ketoisocaproate--->2-hydroxy-3-methylpentanoic_acid,Hydrogenation,2.0157000000000096,4.993554000964906e-05,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->3-methyladipate/pimelate,Formylation,27.9949,1.4619559998152454e-05,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,3-methyladipate/pimelate,159.0663,6.75,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->suberate,Acetylation,42.01049999999998,6.468402001758022e-05,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,suberate,173.0819,6.75,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->homovanillate,Glycine → Taurine,49.97919999999999,0.0034356840200047145,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,homovanillate,181.0506,4.4,HILIC-neg
+lactate--->malate,Carboxylation,43.98979999999999,2.9239120010515762e-05,lactate,89.0244,3.85,malate,133.0142,6.95,HILIC-neg
+glyceric_acid--->malate,Formylation,27.994899999999987,1.4619560012363308e-05,glyceric_acid,105.0193,4.1,malate,133.0142,6.95,HILIC-neg
+fumarate/maleate--->malate,Hydration,18.010499999999993,6.468402000692208e-05,fumarate/maleate,115.0037,7.05,malate,133.0142,6.95,HILIC-neg
+succinate--->malate,Hydroxylation,15.994899999999987,1.4619560012363308e-05,succinate,117.0193,6.9,malate,133.0142,6.95,HILIC-neg
+malate--->erythronic_acid,Hydrogenation,2.0157000000000096,4.993554000964906e-05,malate,133.0142,6.95,erythronic_acid,135.0299,4.4,HILIC-neg
+malate--->hypoxanthine_HILIC-neg,Hydrogenation,2.0170000000000243,0.0013499355400243829,malate,133.0142,6.95,hypoxanthine_HILIC-neg,135.0312,3.4,HILIC-neg
+malate--->2-hydroxyglutarate,Methylation,14.01570000000001,4.993554000876088e-05,malate,133.0142,6.95,2-hydroxyglutarate,147.0299,7,HILIC-neg
+malate--->ascorbate,Acetylation,42.01060000000001,3.531598001416114e-05,malate,133.0142,6.95,ascorbate,175.0248,8.5,HILIC-neg
+uracil--->methylcysteine,Tyr → Trp,23.0081,0.007884417470002347,uracil,111.02,1.5,methylcysteine,134.0281,3.45,HILIC-neg
+methylcysteine--->quinic_acid,Glycine conjugation,57.02799999999999,0.006536278949994312,methylcysteine,134.0281,3.45,quinic_acid,191.0561,4.3,HILIC-neg
+succinate--->erythronic_acid,Hydration,18.010599999999997,3.531597999639757e-05,succinate,117.0193,6.9,erythronic_acid,135.0299,4.4,HILIC-neg
+malate--->erythronic_acid,Hydrogenation,2.0157000000000096,4.993554000964906e-05,malate,133.0142,6.95,erythronic_acid,135.0299,4.4,HILIC-neg
+erythronic_acid--->fucose,Ethylation,28.031300000000016,1.2891998579789288e-07,erythronic_acid,135.0299,4.4,fucose,163.0612,1.4,HILIC-neg
+succinate--->hypoxanthine_HILIC-neg,Hydration,18.01190000000001,0.0013353159800111314,succinate,117.0193,6.9,hypoxanthine_HILIC-neg,135.0312,3.4,HILIC-neg
+malate--->hypoxanthine_HILIC-neg,Hydrogenation,2.0170000000000243,0.0013499355400243829,malate,133.0142,6.95,hypoxanthine_HILIC-neg,135.0312,3.4,HILIC-neg
+hypoxanthine_HILIC-neg--->fucose,Ethylation,28.03,0.0013001289200005317,hypoxanthine_HILIC-neg,135.0312,3.4,fucose,163.0612,1.4,HILIC-neg
+caprylic_acid--->azelaic_acid,Carboxylation,43.9898,2.9239119996304908e-05,caprylic_acid,143.1078,3.4,azelaic_acid,187.0976,6.95,HILIC-neg
+malonate--->alpha-ketoglutarate,Acetylation,42.01049999999999,6.468402000336937e-05,malonate,103.0037,5,alpha-ketoglutarate,145.0142,7.35,HILIC-neg
+succinate--->alpha-ketoglutarate,Formylation,27.994899999999987,1.4619560012363308e-05,succinate,117.0193,6.9,alpha-ketoglutarate,145.0142,7.35,HILIC-neg
+alpha-ketoglutarate--->glutamate_HILIC-neg,C=O → CHNH2,1.0317000000000007,6.551806999866017e-05,alpha-ketoglutarate,145.0142,7.35,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+alpha-ketoglutarate--->2-hydroxyglutarate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,alpha-ketoglutarate,145.0142,7.35,2-hydroxyglutarate,147.0299,7,HILIC-neg
+alpha-ketoglutarate--->aconitate,Formylation,27.995000000000005,8.53804400051672e-05,alpha-ketoglutarate,145.0142,7.35,aconitate,173.0092,9.1,HILIC-neg
+isovaleric_acid--->adipate,Carboxylation,43.9898,2.9239119996304908e-05,isovaleric_acid,101.0608,3.55,adipate,145.0506,6.8,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->adipate,Acetylation,42.01050000000001,6.468401998915851e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,adipate,145.0506,6.8,HILIC-neg
+succinate--->adipate,Ethylation,28.0313,1.289200000087476e-07,succinate,117.0193,6.9,adipate,145.0506,6.8,HILIC-neg
+alpha-keto-beta-methylvalerate/alpha-ketoisocaproate--->adipate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,alpha-keto-beta-methylvalerate/alpha-ketoisocaproate,129.0557,3.4,adipate,145.0506,6.8,HILIC-neg
+adipate--->3-methyladipate/pimelate,Methylation,14.01570000000001,4.993554000876088e-05,adipate,145.0506,6.8,3-methyladipate/pimelate,159.0663,6.75,HILIC-neg
+adipate--->fucose,Hydration,18.01060000000001,3.531598001060843e-05,adipate,145.0506,6.8,fucose,163.0612,1.4,HILIC-neg
+adipate--->suberate,Ethylation,28.031299999999987,1.289200142196023e-07,adipate,145.0506,6.8,suberate,173.0819,6.75,HILIC-neg
+lactate--->glutamate_HILIC-neg,Glycine conjugation,57.02149999999999,3.627894999169712e-05,lactate,89.0244,3.85,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+N-acetyl-L-alanine--->glutamate_HILIC-neg,Hydroxylation,15.994900000000001,1.4619559998152454e-05,N-acetyl-L-alanine,130.051,3.9,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+alpha-ketoglutarate--->glutamate_HILIC-neg,C=O → CHNH2,1.0317000000000007,6.551806999866017e-05,alpha-ketoglutarate,145.0142,7.35,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+2-hydroxyglutarate--->glutamate_HILIC-neg,COOH → CONH2,-0.9840000000000089,1.5582529989899285e-05,2-hydroxyglutarate,147.0299,7,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+glutamate_HILIC-neg--->2-aminoadipate,Methylation,14.015600000000006,5.0064459994558774e-05,glutamate_HILIC-neg,146.0459,5.2,2-aminoadipate,160.0615,5.25,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-hydroxyglutarate,Carboxylation,43.9898,2.9239119996304908e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-hydroxyglutarate,147.0299,7,HILIC-neg
+glyceric_acid--->2-hydroxyglutarate,Acetylation,42.0106,3.5315979999950287e-05,glyceric_acid,105.0193,4.1,2-hydroxyglutarate,147.0299,7,HILIC-neg
+taurine_HILIC-neg--->2-hydroxyglutarate,Tyr → Trp,23.022499999999994,0.006515582529992514,taurine_HILIC-neg,124.0074,3.6,2-hydroxyglutarate,147.0299,7,HILIC-neg
+malate--->2-hydroxyglutarate,Methylation,14.01570000000001,4.993554000876088e-05,malate,133.0142,6.95,2-hydroxyglutarate,147.0299,7,HILIC-neg
+alpha-ketoglutarate--->2-hydroxyglutarate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,alpha-ketoglutarate,145.0142,7.35,2-hydroxyglutarate,147.0299,7,HILIC-neg
+2-hydroxyglutarate--->glutamate_HILIC-neg,COOH → CONH2,-0.9840000000000089,1.5582529989899285e-05,2-hydroxyglutarate,147.0299,7,glutamate_HILIC-neg,146.0459,5.2,HILIC-neg
+2-hydroxyglutarate--->3-methylxanthine,Hydration,18.011899999999997,0.0013353159799969205,2-hydroxyglutarate,147.0299,7,3-methylxanthine,165.0418,3.15,HILIC-neg
+2-hydroxyglutarate--->ascorbate,Formylation,27.9949,1.4619559998152454e-05,2-hydroxyglutarate,147.0299,7,ascorbate,175.0248,8.5,HILIC-neg
+2-hydroxyglutarate--->citrate/isocitrate,Carboxylation,43.9898,2.9239119996304908e-05,2-hydroxyglutarate,147.0299,7,citrate/isocitrate,191.0197,9,HILIC-neg
+hydrocinnamic_acid--->3-methylxanthine,OH → SH,15.980999999999995,0.003843619559994238,hydrocinnamic_acid,149.0608,3.6,3-methylxanthine,165.0418,3.15,HILIC-neg
+hydrocinnamic_acid--->phenyllactic_acid,Hydroxylation,15.994900000000001,1.4619559998152454e-05,hydrocinnamic_acid,149.0608,3.6,phenyllactic_acid,165.0557,3.55,HILIC-neg
+hydrocinnamic_acid--->indole-3-propionate,Phe → Trp,39.01089999999999,9.629699917468315e-07,hydrocinnamic_acid,149.0608,3.6,indole-3-propionate,188.0717,4.45,HILIC-neg
+hydrocinnamic_acid--->pentose_monophosphate,Sulfation,79.9511,0.005714858679993995,hydrocinnamic_acid,149.0608,3.6,pentose_monophosphate,229.0119,7.25,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->gentisate,Glycine → Taurine,49.97919999999999,0.0034356840200047145,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,gentisate,153.0193,4.6,HILIC-neg
+gentisate--->DHAP/glyceraldehyde_3P,OH → SH,15.971400000000017,0.0057563804399833884,gentisate,153.0193,4.6,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+gentisate--->homovanillate,Ethylation,28.031300000000016,1.2891998579789288e-07,gentisate,153.0193,4.6,homovanillate,181.0506,4.4,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->3-methyladipate/pimelate,Formylation,27.9949,1.4619559998152454e-05,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,3-methyladipate/pimelate,159.0663,6.75,HILIC-neg
+adipate--->3-methyladipate/pimelate,Methylation,14.01570000000001,4.993554000876088e-05,adipate,145.0506,6.8,3-methyladipate/pimelate,159.0663,6.75,HILIC-neg
+3-methyladipate/pimelate--->suberate,Methylation,14.015599999999978,5.0064460022980484e-05,3-methyladipate/pimelate,159.0663,6.75,suberate,173.0819,6.75,HILIC-neg
+3-methyladipate/pimelate--->azelaic_acid,Ethylation,28.031299999999987,1.289200142196023e-07,3-methyladipate/pimelate,159.0663,6.75,azelaic_acid,187.0976,6.95,HILIC-neg
+alpha-hydroxybutyrate/beta-hydroxybutyrate--->2-aminoadipate,Glycine conjugation,57.0214,6.372104999741168e-05,alpha-hydroxybutyrate/beta-hydroxybutyrate,103.0401,3.6,2-aminoadipate,160.0615,5.25,HILIC-neg
+glutamate_HILIC-neg--->2-aminoadipate,Methylation,14.015600000000006,5.0064459994558774e-05,glutamate_HILIC-neg,146.0459,5.2,2-aminoadipate,160.0615,5.25,HILIC-neg
+2-aminoadipate--->inosine_HILIC-neg,Taurine conjugation,107.01200000000003,0.007900594930021043,2-aminoadipate,160.0615,5.25,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+erythronic_acid--->fucose,Ethylation,28.031300000000016,1.2891998579789288e-07,erythronic_acid,135.0299,4.4,fucose,163.0612,1.4,HILIC-neg
+hypoxanthine_HILIC-neg--->fucose,Ethylation,28.03,0.0013001289200005317,hypoxanthine_HILIC-neg,135.0312,3.4,fucose,163.0612,1.4,HILIC-neg
+adipate--->fucose,Hydration,18.01060000000001,3.531598001060843e-05,adipate,145.0506,6.8,fucose,163.0612,1.4,HILIC-neg
+fucose--->fructose/glucose/galactose,Hydroxylation,15.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,fructose/glucose/galactose,179.0561,1.85,HILIC-neg
+fucose--->inositol,Hydroxylation,15.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,inositol,179.0561,2.7,HILIC-neg
+fucose--->sorbitol,Hydration,18.010599999999982,3.531597998218672e-05,fucose,163.0612,1.4,sorbitol,181.0718,2,HILIC-neg
+fucose--->quinic_acid,Formylation,27.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,quinic_acid,191.0561,4.3,HILIC-neg
+2-hydroxyglutarate--->3-methylxanthine,Hydration,18.011899999999997,0.0013353159799969205,2-hydroxyglutarate,147.0299,7,3-methylxanthine,165.0418,3.15,HILIC-neg
+hydrocinnamic_acid--->3-methylxanthine,OH → SH,15.980999999999995,0.003843619559994238,hydrocinnamic_acid,149.0608,3.6,3-methylxanthine,165.0418,3.15,HILIC-neg
+3-methylxanthine--->fructose/glucose/galactose,Methylation,14.014299999999992,0.0013500644600092926,3-methylxanthine,165.0418,3.15,fructose/glucose/galactose,179.0561,1.85,HILIC-neg
+3-methylxanthine--->inositol,Methylation,14.014299999999992,0.0013500644600092926,3-methylxanthine,165.0418,3.15,inositol,179.0561,2.7,HILIC-neg
+3-methylxanthine--->glucuronate,Formylation,27.993600000000015,0.0013146195599844646,3-methylxanthine,165.0418,3.15,glucuronate,193.0354,5,HILIC-neg
+hydrocinnamic_acid--->phenyllactic_acid,Hydroxylation,15.994900000000001,1.4619559998152454e-05,hydrocinnamic_acid,149.0608,3.6,phenyllactic_acid,165.0557,3.55,HILIC-neg
+phenyllactic_acid--->homovanillate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,phenyllactic_acid,165.0557,3.55,homovanillate,181.0506,4.4,HILIC-neg
+phenyllactic_acid--->indole-3-propionate,Tyr → Trp,23.01599999999999,1.5582529989899285e-05,phenyllactic_acid,165.0557,3.55,indole-3-propionate,188.0717,4.45,HILIC-neg
+phenyllactic_acid--->indolelactate,Phe → Trp,39.01089999999999,9.629699917468315e-07,phenyllactic_acid,165.0557,3.55,indolelactate,204.0666,4.4,HILIC-neg
+taurine_HILIC-neg--->quinolinate,Acetylation,42.0072,0.003364684019999231,taurine_HILIC-neg,124.0074,3.6,quinolinate,166.0146,7.45,HILIC-neg
+quinolinate--->salicylurate,Ethylation,28.031299999999987,1.289200142196023e-07,quinolinate,166.0146,7.45,salicylurate,194.0459,6.1,HILIC-neg
+pyruvate--->PEP,Phosphorylation,79.9663,3.052090998778567e-05,pyruvate,87.0088,4.8,PEP,166.9751,9.5,HILIC-neg
+PEP--->DHAP/glyceraldehyde_3P,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,PEP,166.9751,9.5,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+PEP--->2-phosphoglycerate,Hydration,18.01060000000001,3.531598001060843e-05,PEP,166.9751,9.5,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+PEP--->3-phosphoglycerate,Hydration,18.01060000000001,3.531598001060843e-05,PEP,166.9751,9.5,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+lactate--->DHAP/glyceraldehyde_3P,Phosphorylation,79.9663,3.052090998778567e-05,lactate,89.0244,3.85,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+gentisate--->DHAP/glyceraldehyde_3P,OH → SH,15.971400000000017,0.0057563804399833884,gentisate,153.0193,4.6,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+PEP--->DHAP/glyceraldehyde_3P,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,PEP,166.9751,9.5,DHAP/glyceraldehyde_3P,168.9907,8.65,HILIC-neg
+DHAP/glyceraldehyde_3P--->alpha-glycerophosphate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,alpha-glycerophosphate,171.0064,7.25,HILIC-neg
+DHAP/glyceraldehyde_3P--->2-phosphoglycerate,Hydroxylation,15.995000000000005,8.53804400051672e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+DHAP/glyceraldehyde_3P--->3-phosphoglycerate,Hydroxylation,15.995000000000005,8.53804400051672e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+DHAP/glyceraldehyde_3P--->alpha-glycerophosphate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,alpha-glycerophosphate,171.0064,7.25,HILIC-neg
+alpha-glycerophosphate--->IMP,Glucuronidation,176.0334,0.0013120248000006995,alpha-glycerophosphate,171.0064,7.25,IMP,347.0398,8.7,HILIC-neg
+lactate--->aconitate,Malonylation,83.98479999999999,5.614132000175687e-05,lactate,89.0244,3.85,aconitate,173.0092,9.1,HILIC-neg
+alpha-ketoglutarate--->aconitate,Formylation,27.995000000000005,8.53804400051672e-05,alpha-ketoglutarate,145.0142,7.35,aconitate,173.0092,9.1,HILIC-neg
+aconitate--->ascorbate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,aconitate,173.0092,9.1,ascorbate,175.0248,8.5,HILIC-neg
+aconitate--->citrate/isocitrate,Hydration,18.010500000000008,6.468401999271123e-05,aconitate,173.0092,9.1,citrate/isocitrate,191.0197,9,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->suberate,Acetylation,42.01049999999998,6.468402001758022e-05,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,suberate,173.0819,6.75,HILIC-neg
+adipate--->suberate,Ethylation,28.031299999999987,1.289200142196023e-07,adipate,145.0506,6.8,suberate,173.0819,6.75,HILIC-neg
+3-methyladipate/pimelate--->suberate,Methylation,14.015599999999978,5.0064460022980484e-05,3-methyladipate/pimelate,159.0663,6.75,suberate,173.0819,6.75,HILIC-neg
+suberate--->azelaic_acid,Methylation,14.01570000000001,4.993554000876088e-05,suberate,173.0819,6.75,azelaic_acid,187.0976,6.95,HILIC-neg
+suberate--->sebacate,Ethylation,28.031300000000016,1.2891998579789288e-07,suberate,173.0819,6.75,sebacate,201.1132,6.75,HILIC-neg
+thymine--->ascorbate,Glycine → Taurine,49.98909999999999,0.006464315979997082,thymine,125.0357,1.35,ascorbate,175.0248,8.5,HILIC-neg
+malate--->ascorbate,Acetylation,42.01060000000001,3.531598001416114e-05,malate,133.0142,6.95,ascorbate,175.0248,8.5,HILIC-neg
+2-hydroxyglutarate--->ascorbate,Formylation,27.9949,1.4619559998152454e-05,2-hydroxyglutarate,147.0299,7,ascorbate,175.0248,8.5,HILIC-neg
+aconitate--->ascorbate,Hydrogenation,2.0156000000000063,5.0064459993670596e-05,aconitate,173.0092,9.1,ascorbate,175.0248,8.5,HILIC-neg
+ascorbate--->citrate/isocitrate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,ascorbate,175.0248,8.5,citrate/isocitrate,191.0197,9,HILIC-neg
+ascorbate--->glucuronate,Hydration,18.01060000000001,3.531598001060843e-05,ascorbate,175.0248,8.5,glucuronate,193.0354,5,HILIC-neg
+hippurate--->salicylurate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,hippurate,178.051,3.9,salicylurate,194.0459,6.1,HILIC-neg
+fucose--->fructose/glucose/galactose,Hydroxylation,15.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,fructose/glucose/galactose,179.0561,1.85,HILIC-neg
+3-methylxanthine--->fructose/glucose/galactose,Methylation,14.014299999999992,0.0013500644600092926,3-methylxanthine,165.0418,3.15,fructose/glucose/galactose,179.0561,1.85,HILIC-neg
+fructose/glucose/galactose--->sorbitol,Hydrogenation,2.0157000000000096,4.993554000964906e-05,fructose/glucose/galactose,179.0561,1.85,sorbitol,181.0718,2,HILIC-neg
+fructose/glucose/galactose--->kynurenine,Ethylation,28.0214,0.009900128920001805,fructose/glucose/galactose,179.0561,1.85,kynurenine,207.0775,3.15,HILIC-neg
+fructose/glucose/galactose--->hexose_monophosphate,Phosphorylation,79.96630000000002,3.052090997357482e-05,fructose/glucose/galactose,179.0561,1.85,hexose_monophosphate,259.0224,7.3,HILIC-neg
+fructose/glucose/galactose--->lactose/sucrose/trehalose,Glucosylation,162.05280000000002,2.342009997846617e-05,fructose/glucose/galactose,179.0561,1.85,lactose/sucrose/trehalose,341.1089,2.45,HILIC-neg
+fucose--->inositol,Hydroxylation,15.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,inositol,179.0561,2.7,HILIC-neg
+3-methylxanthine--->inositol,Methylation,14.014299999999992,0.0013500644600092926,3-methylxanthine,165.0418,3.15,inositol,179.0561,2.7,HILIC-neg
+inositol--->sorbitol,Hydrogenation,2.0157000000000096,4.993554000964906e-05,inositol,179.0561,2.7,sorbitol,181.0718,2,HILIC-neg
+inositol--->kynurenine,Ethylation,28.0214,0.009900128920001805,inositol,179.0561,2.7,kynurenine,207.0775,3.15,HILIC-neg
+inositol--->hexose_monophosphate,Phosphorylation,79.96630000000002,3.052090997357482e-05,inositol,179.0561,2.7,hexose_monophosphate,259.0224,7.3,HILIC-neg
+inositol--->lactose/sucrose/trehalose,Glucosylation,162.05280000000002,2.342009997846617e-05,inositol,179.0561,2.7,lactose/sucrose/trehalose,341.1089,2.45,HILIC-neg
+2-hydroxy-3-methylpentanoic_acid--->homovanillate,Glycine → Taurine,49.97919999999999,0.0034356840200047145,2-hydroxy-3-methylpentanoic_acid,131.0714,3.4,homovanillate,181.0506,4.4,HILIC-neg
+gentisate--->homovanillate,Ethylation,28.031300000000016,1.2891998579789288e-07,gentisate,153.0193,4.6,homovanillate,181.0506,4.4,HILIC-neg
+phenyllactic_acid--->homovanillate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,phenyllactic_acid,165.0557,3.55,homovanillate,181.0506,4.4,HILIC-neg
+homovanillate--->indolelactate,Tyr → Trp,23.01599999999999,1.5582529989899285e-05,homovanillate,181.0506,4.4,indolelactate,204.0666,4.4,HILIC-neg
+fucose--->sorbitol,Hydration,18.010599999999982,3.531597998218672e-05,fucose,163.0612,1.4,sorbitol,181.0718,2,HILIC-neg
+fructose/glucose/galactose--->sorbitol,Hydrogenation,2.0157000000000096,4.993554000964906e-05,fructose/glucose/galactose,179.0561,1.85,sorbitol,181.0718,2,HILIC-neg
+inositol--->sorbitol,Hydrogenation,2.0157000000000096,4.993554000964906e-05,inositol,179.0561,2.7,sorbitol,181.0718,2,HILIC-neg
+4-pyridoxate--->sorbitol,COOH → CONH2,-0.9740999999999929,0.009915582530005906,4-pyridoxate,182.0459,3.65,sorbitol,181.0718,2,HILIC-neg
+4-pyridoxate--->sorbitol,COOH → CONH2,-0.9740999999999929,0.009915582530005906,4-pyridoxate,182.0459,3.65,sorbitol,181.0718,2,HILIC-neg
+glyceric_acid--->2-phosphoglycerate,Phosphorylation,79.96640000000001,6.947909001553398e-05,glyceric_acid,105.0193,4.1,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+PEP--->2-phosphoglycerate,Hydration,18.01060000000001,3.531598001060843e-05,PEP,166.9751,9.5,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+DHAP/glyceraldehyde_3P--->2-phosphoglycerate,Hydroxylation,15.995000000000005,8.53804400051672e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,2-phosphoglycerate,184.9857,9.05,HILIC-neg
+2-phosphoglycerate--->IMP,Glucosylation,162.0541,0.001276579900007846,2-phosphoglycerate,184.9857,9.05,IMP,347.0398,8.7,HILIC-neg
+glyceric_acid--->3-phosphoglycerate,Phosphorylation,79.96640000000001,6.947909001553398e-05,glyceric_acid,105.0193,4.1,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+PEP--->3-phosphoglycerate,Hydration,18.01060000000001,3.531598001060843e-05,PEP,166.9751,9.5,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+DHAP/glyceraldehyde_3P--->3-phosphoglycerate,Hydroxylation,15.995000000000005,8.53804400051672e-05,DHAP/glyceraldehyde_3P,168.9907,8.65,3-phosphoglycerate,184.9857,9.25,HILIC-neg
+3-phosphoglycerate--->IMP,Glucosylation,162.0541,0.001276579900007846,3-phosphoglycerate,184.9857,9.25,IMP,347.0398,8.7,HILIC-neg
+caprylic_acid--->azelaic_acid,Carboxylation,43.9898,2.9239119996304908e-05,caprylic_acid,143.1078,3.4,azelaic_acid,187.0976,6.95,HILIC-neg
+3-methyladipate/pimelate--->azelaic_acid,Ethylation,28.031299999999987,1.289200142196023e-07,3-methyladipate/pimelate,159.0663,6.75,azelaic_acid,187.0976,6.95,HILIC-neg
+suberate--->azelaic_acid,Methylation,14.01570000000001,4.993554000876088e-05,suberate,173.0819,6.75,azelaic_acid,187.0976,6.95,HILIC-neg
+indole-3-propionate--->azelaic_acid,COOH → CONH2,-0.9740999999999929,0.009915582530005906,indole-3-propionate,188.0717,4.45,azelaic_acid,187.0976,6.95,HILIC-neg
+azelaic_acid--->sebacate,Methylation,14.015600000000006,5.0064459994558774e-05,azelaic_acid,187.0976,6.95,sebacate,201.1132,6.75,HILIC-neg
+azelaic_acid--->tryptophan_HILIC-neg,OH → SH,15.985000000000014,0.007843619560013337,azelaic_acid,187.0976,6.95,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+azelaic_acid--->inosine_HILIC-neg,Phosphorylation,79.97590000000002,0.009569479090032473,azelaic_acid,187.0976,6.95,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+N6-acetyl-L-lysine--->tryptophan_HILIC-neg,OH → SH,15.973800000000011,0.003356380439988982,N6-acetyl-L-lysine,187.1088,3.1,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+N6-acetyl-L-lysine--->inosine_HILIC-neg,Phosphorylation,79.96470000000002,0.0016305209099698459,N6-acetyl-L-lysine,187.1088,3.1,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+hydrocinnamic_acid--->indole-3-propionate,Phe → Trp,39.01089999999999,9.629699917468315e-07,hydrocinnamic_acid,149.0608,3.6,indole-3-propionate,188.0717,4.45,HILIC-neg
+phenyllactic_acid--->indole-3-propionate,Tyr → Trp,23.01599999999999,1.5582529989899285e-05,phenyllactic_acid,165.0557,3.55,indole-3-propionate,188.0717,4.45,HILIC-neg
+indole-3-propionate--->azelaic_acid,COOH → CONH2,-0.9740999999999929,0.009915582530005906,indole-3-propionate,188.0717,4.45,azelaic_acid,187.0976,6.95,HILIC-neg
+indole-3-propionate--->indolelactate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,indole-3-propionate,188.0717,4.45,indolelactate,204.0666,4.4,HILIC-neg
+2-hydroxyglutarate--->citrate/isocitrate,Carboxylation,43.9898,2.9239119996304908e-05,2-hydroxyglutarate,147.0299,7,citrate/isocitrate,191.0197,9,HILIC-neg
+aconitate--->citrate/isocitrate,Hydration,18.010500000000008,6.468401999271123e-05,aconitate,173.0092,9.1,citrate/isocitrate,191.0197,9,HILIC-neg
+ascorbate--->citrate/isocitrate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,ascorbate,175.0248,8.5,citrate/isocitrate,191.0197,9,HILIC-neg
+citrate/isocitrate--->glucuronate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,citrate/isocitrate,191.0197,9,glucuronate,193.0354,5,HILIC-neg
+methylcysteine--->quinic_acid,Glycine conjugation,57.02799999999999,0.006536278949994312,methylcysteine,134.0281,3.45,quinic_acid,191.0561,4.3,HILIC-neg
+fucose--->quinic_acid,Formylation,27.994899999999973,1.4619560026574163e-05,fucose,163.0612,1.4,quinic_acid,191.0561,4.3,HILIC-neg
+3-methylxanthine--->glucuronate,Formylation,27.993600000000015,0.0013146195599844646,3-methylxanthine,165.0418,3.15,glucuronate,193.0354,5,HILIC-neg
+ascorbate--->glucuronate,Hydration,18.01060000000001,3.531598001060843e-05,ascorbate,175.0248,8.5,glucuronate,193.0354,5,HILIC-neg
+citrate/isocitrate--->glucuronate,Hydrogenation,2.0157000000000096,4.993554000964906e-05,citrate/isocitrate,191.0197,9,glucuronate,193.0354,5,HILIC-neg
+quinolinate--->salicylurate,Ethylation,28.031299999999987,1.289200142196023e-07,quinolinate,166.0146,7.45,salicylurate,194.0459,6.1,HILIC-neg
+hippurate--->salicylurate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,hippurate,178.051,3.9,salicylurate,194.0459,6.1,HILIC-neg
+suberate--->sebacate,Ethylation,28.031300000000016,1.2891998579789288e-07,suberate,173.0819,6.75,sebacate,201.1132,6.75,HILIC-neg
+azelaic_acid--->sebacate,Methylation,14.015600000000006,5.0064459994558774e-05,azelaic_acid,187.0976,6.95,sebacate,201.1132,6.75,HILIC-neg
+azelaic_acid--->tryptophan_HILIC-neg,OH → SH,15.985000000000014,0.007843619560013337,azelaic_acid,187.0976,6.95,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+N6-acetyl-L-lysine--->tryptophan_HILIC-neg,OH → SH,15.973800000000011,0.003356380439988982,N6-acetyl-L-lysine,187.1088,3.1,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+indolelactate--->tryptophan_HILIC-neg,COOH → CONH2,-0.9839999999999804,1.5582530018320995e-05,indolelactate,204.0666,4.4,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+phenyllactic_acid--->indolelactate,Phe → Trp,39.01089999999999,9.629699917468315e-07,phenyllactic_acid,165.0557,3.55,indolelactate,204.0666,4.4,HILIC-neg
+homovanillate--->indolelactate,Tyr → Trp,23.01599999999999,1.5582529989899285e-05,homovanillate,181.0506,4.4,indolelactate,204.0666,4.4,HILIC-neg
+indole-3-propionate--->indolelactate,Hydroxylation,15.994900000000001,1.4619559998152454e-05,indole-3-propionate,188.0717,4.45,indolelactate,204.0666,4.4,HILIC-neg
+indolelactate--->tryptophan_HILIC-neg,COOH → CONH2,-0.9839999999999804,1.5582530018320995e-05,indolelactate,204.0666,4.4,tryptophan_HILIC-neg,203.0826,3.35,HILIC-neg
+fructose/glucose/galactose--->kynurenine,Ethylation,28.0214,0.009900128920001805,fructose/glucose/galactose,179.0561,1.85,kynurenine,207.0775,3.15,HILIC-neg
+inositol--->kynurenine,Ethylation,28.0214,0.009900128920001805,inositol,179.0561,2.7,kynurenine,207.0775,3.15,HILIC-neg
+hydrocinnamic_acid--->pentose_monophosphate,Sulfation,79.9511,0.005714858679993995,hydrocinnamic_acid,149.0608,3.6,pentose_monophosphate,229.0119,7.25,HILIC-neg
+uridine--->5-methyluridine/ribothymidine,Methylation,14.015600000000006,5.0064459994558774e-05,uridine,243.0623,1.75,5-methyluridine/ribothymidine,257.0779,1.55,HILIC-neg
+uridine--->5-methyluridine/ribothymidine,Methylation,14.015600000000006,5.0064459994558774e-05,uridine,243.0623,1.75,5-methyluridine/ribothymidine,257.0779,1.55,HILIC-neg
+fructose/glucose/galactose--->hexose_monophosphate,Phosphorylation,79.96630000000002,3.052090997357482e-05,fructose/glucose/galactose,179.0561,1.85,hexose_monophosphate,259.0224,7.3,HILIC-neg
+inositol--->hexose_monophosphate,Phosphorylation,79.96630000000002,3.052090997357482e-05,inositol,179.0561,2.7,hexose_monophosphate,259.0224,7.3,HILIC-neg
+glyceric_acid--->inosine_HILIC-neg,Glucosylation,162.05420000000004,0.0013765799000395873,glyceric_acid,105.0193,4.1,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+2-aminoadipate--->inosine_HILIC-neg,Taurine conjugation,107.01200000000003,0.007900594930021043,2-aminoadipate,160.0615,5.25,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+azelaic_acid--->inosine_HILIC-neg,Phosphorylation,79.97590000000002,0.009569479090032473,azelaic_acid,187.0976,6.95,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+N6-acetyl-L-lysine--->inosine_HILIC-neg,Phosphorylation,79.96470000000002,0.0016305209099698459,N6-acetyl-L-lysine,187.1088,3.1,inosine_HILIC-neg,267.0735,3.35,HILIC-neg
+inosine_HILIC-neg--->IMP,Phosphorylation,79.96629999999999,3.0520910001996526e-05,inosine_HILIC-neg,267.0735,3.35,IMP,347.0398,8.7,HILIC-neg
+fructose/glucose/galactose--->lactose/sucrose/trehalose,Glucosylation,162.05280000000002,2.342009997846617e-05,fructose/glucose/galactose,179.0561,1.85,lactose/sucrose/trehalose,341.1089,2.45,HILIC-neg
+inositol--->lactose/sucrose/trehalose,Glucosylation,162.05280000000002,2.342009997846617e-05,inositol,179.0561,2.7,lactose/sucrose/trehalose,341.1089,2.45,HILIC-neg
+IMP--->AMP,COOH → CONH2,-0.9840000000000373,1.5582529961477576e-05,IMP,347.0398,8.7,AMP,346.0558,7.65,HILIC-neg
+AMP--->ADP,Phosphorylation,79.96630000000005,3.052090994515311e-05,AMP,346.0558,7.65,ADP,426.0221,9.75,HILIC-neg
+alpha-glycerophosphate--->IMP,Glucuronidation,176.0334,0.0013120248000006995,alpha-glycerophosphate,171.0064,7.25,IMP,347.0398,8.7,HILIC-neg
+2-phosphoglycerate--->IMP,Glucosylation,162.0541,0.001276579900007846,2-phosphoglycerate,184.9857,9.05,IMP,347.0398,8.7,HILIC-neg
+3-phosphoglycerate--->IMP,Glucosylation,162.0541,0.001276579900007846,3-phosphoglycerate,184.9857,9.25,IMP,347.0398,8.7,HILIC-neg
+inosine_HILIC-neg--->IMP,Phosphorylation,79.96629999999999,3.0520910001996526e-05,inosine_HILIC-neg,267.0735,3.35,IMP,347.0398,8.7,HILIC-neg
+IMP--->AMP,COOH → CONH2,-0.9840000000000373,1.5582529961477576e-05,IMP,347.0398,8.7,AMP,346.0558,7.65,HILIC-neg
+chenodeoxycholate/deoxycholate--->glycodeoxycholate/glycochenodeoxycholate,Glycine conjugation,57.02140000000003,6.372104996898997e-05,chenodeoxycholate/deoxycholate,391.2854,4,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,HILIC-neg
+chenodeoxycholate/deoxycholate--->taurodeoxycholate/taurochenodeoxycholate,Taurine conjugation,107.0041,5.949299861640611e-07,chenodeoxycholate/deoxycholate,391.2854,4,taurodeoxycholate/taurochenodeoxycholate,498.2895,3.4,HILIC-neg
+AMP--->ADP,Phosphorylation,79.96630000000005,3.052090994515311e-05,AMP,346.0558,7.65,ADP,426.0221,9.75,HILIC-neg
+ADP--->GDP,Hydroxylation,15.995000000000005,8.53804400051672e-05,ADP,426.0221,9.75,GDP,442.0171,10.55,HILIC-neg
+ADP--->GDP,Hydroxylation,15.995000000000005,8.53804400051672e-05,ADP,426.0221,9.75,GDP,442.0171,10.55,HILIC-neg
+chenodeoxycholate/deoxycholate--->glycodeoxycholate/glycochenodeoxycholate,Glycine conjugation,57.02140000000003,6.372104996898997e-05,chenodeoxycholate/deoxycholate,391.2854,4,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,HILIC-neg
+glycodeoxycholate/glycochenodeoxycholate--->glycocholate,Hydroxylation,15.995000000000005,8.53804400051672e-05,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,glycocholate,464.3018,3.9,HILIC-neg
+glycodeoxycholate/glycochenodeoxycholate--->taurodeoxycholate/taurochenodeoxycholate,Glycine → Taurine,49.982699999999966,6.431597996936489e-05,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,taurodeoxycholate/taurochenodeoxycholate,498.2895,3.4,HILIC-neg
+glycodeoxycholate/glycochenodeoxycholate--->glycocholate,Hydroxylation,15.995000000000005,8.53804400051672e-05,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,glycocholate,464.3018,3.9,HILIC-neg
+chenodeoxycholate/deoxycholate--->taurodeoxycholate/taurochenodeoxycholate,Taurine conjugation,107.0041,5.949299861640611e-07,chenodeoxycholate/deoxycholate,391.2854,4,taurodeoxycholate/taurochenodeoxycholate,498.2895,3.4,HILIC-neg
+glycodeoxycholate/glycochenodeoxycholate--->taurodeoxycholate/taurochenodeoxycholate,Glycine → Taurine,49.982699999999966,6.431597996936489e-05,glycodeoxycholate/glycochenodeoxycholate,448.3068,3.8,taurodeoxycholate/taurochenodeoxycholate,498.2895,3.4,HILIC-neg

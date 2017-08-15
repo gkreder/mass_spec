@@ -1,0 +1,17 @@
+-----------------------------------------------------------
+Input file --- data/input/MCDS_MzRtInfo.txt
+System Call --- fast_transform.py data/input/MCDS_MzRtInfo.txt
+Tolerance (m/z) --- 0.01
+-----------------------------------------------------------
+*Total*
+Total Metabolites (no NA) --- 7083
+Total found transformations --- 94890
+
+*HILIC-pos*
+Number metabolites (HILIC-pos) --- 2943
+Found transformations (HILIC-pos) --- 42354
+
+*LIPID*
+Number metabolites (LIPID) --- 4140
+Found transformations (LIPID) --- 52536
+
