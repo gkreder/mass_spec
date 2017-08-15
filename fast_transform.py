@@ -56,7 +56,8 @@ max_diff = max([abs(x) for x in transformations.keys()])
 # Open data file and readlines (ignoring NA lines)
 with open(in_file, 'r') as f:
 	lines = [line.strip() for line in f if 
-				get_mz(line).upper() != 'NA' and get_rt(line).upper() != 'NA']
+				get_mz_in(line).upper() != 'NA' \
+				and get_rt_in(line).upper() != 'NA']
 
 # Throw away header line
 lines = lines[1 : ]
@@ -73,7 +74,7 @@ j_start = 0
 method_counts = {}
 for i, line_outer in enumerate(lines):
 	check_time(i, lines, start_time)
-	method = get_method(line_outer)
+	method = get_method_in(line_outer)
 	if method in method_counts:
 		method_counts[method] = method_counts[method] + 1
 	else:
@@ -82,7 +83,7 @@ for i, line_outer in enumerate(lines):
 	j_temp = j_start
 	for j in range(j_start, len(lines)):
 		line_inner = lines[j]
-		delta_mz = float(get_mz(line_inner)) - float(get_mz(line_outer))
+		delta_mz = float(get_mz_in(line_inner)) - float(get_mz_in(line_outer))
 		if abs(delta_mz) > abs(max_diff) + tolerance:
 			if j >= i:
 				break
@@ -90,7 +91,7 @@ for i, line_outer in enumerate(lines):
 				if j > j_start:
 					j_temp = j
 				continue
-		if method == get_method(line_inner):
+		if method == get_method_in(line_inner):
 			closest_match = min(mz_list, key = \
 										 lambda x : min(
 										 	abs(x - delta_mz),
@@ -127,7 +128,7 @@ for method in saved_lines:
 		for line in saved_lines[method]:
 			print(line, file = f)
 summary_file = in_file.split('_')[0].split('.')[0] + '_' + \
-	str(tolerance).replace('.', '-') + '_transformation_summary.txt'
+	str(tolerance).replace('.', '-') + '_trans_summary.txt'
 with open(summary_file, 'w') as f:
 	print('-----------------------------------------------------------', file=f)
 	print('Input file --- ' + in_file, file = f)

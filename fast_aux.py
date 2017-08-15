@@ -6,36 +6,38 @@ import math
 import time
 import sys
 ################################################################################
-# Helper function/variable definitions
+# Functions for reading input data files
 ################################################################################
-def get_mz(line):
+def get_mz_in(line):
 	return line.split('\t')[2]
 
-def get_rt(line):
+def get_rt_in(line):
 	return line.split('\t')[3]
 
-def get_method(line):
+def get_method_in(line):
 	return line.split('\t')[1]
 
-def get_metabolite(line):
+def get_metabolite_in(line):
 	return line.split('\t')[0]
-
+################################################################################
+# Functions for writing data files
+################################################################################
 def join_trans_lines(closest_match, line_from, line_to, \
 	transformations, delimiter):
 
-	delta_mz_obs = float(get_mz(line_to)) - float(get_mz(line_from))
-	saved_line = [get_metabolite(line_from) + '--->' + 
-								get_metabolite(line_to),
+	delta_mz_obs = float(get_mz_in(line_to)) - float(get_mz_in(line_from))
+	saved_line = [get_metabolite_in(line_from) + '--->' + 
+								get_metabolite_in(line_to),
 				  transformations[closest_match],
 				  str(delta_mz_obs),
 				  str(abs(closest_match - delta_mz_obs)),
-				  get_metabolite(line_from),
-				  get_mz(line_from),
-				  get_rt(line_from),
-				  get_metabolite(line_to),
-				  get_mz(line_to),
-				  get_rt(line_to),
-				  get_method(line_to)]
+				  get_metabolite_in(line_from),
+				  get_mz_in(line_from),
+				  get_rt_in(line_from),
+				  get_metabolite_in(line_to),
+				  get_mz_in(line_to),
+				  get_rt_in(line_to),
+				  get_method_in(line_to)]
 	return(delimiter.join(saved_line))
 
 def get_header(delimiter):
@@ -51,36 +53,56 @@ def get_header(delimiter):
 						   'rt_to',
 						   'method'])
 
-def check_time(i, lines, start_time):
+def check_time(i, lines, start_time, tabs = 0):
 	index_1 = int(math.ceil((len(lines) / 100)))
 	index_10 = int(index_1 * 10)
 	index_25 = int(index_1 * 25)
 	index_50 = int(index_1 * 50)
 	index_75 = int(index_1 * 75)
 	index_90 = int(index_1 * 90)
-
+	print_string = ''
+	for b in range(tabs):
+		print_string += '\t'
 	if i == index_1:
-		print('1% Complete --- ' + 
+		print(print_string + '1% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_10:
-		print('10% Complete --- ' + 
+		print(print_string + '10% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_25:
-		print('25% Complete --- ' + 
+		print(print_string + '25% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_50:
-		print('50% Complete --- ' + 
+		print(print_string + '50% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_75:
-		print('75% Complete --- ' + 
+		print(print_string + '75% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_90:
 		print('90% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
+################################################################################
+# Functions for reading intermediate adduct files
+################################################################################
+def get_adduct_err(line):
+	return float(line.split(',')[3])
+def get_adduct_from(line):
+	return line.split(',')[0].split('--->')[0]
+def get_adduct_to(line):
+	return line.split(',')[0].split('--->')[1]
+################################################################################
+# Functions for reading intermediate trabs files
+################################################################################
+def get_trans_err(line):
+	return float(line.split(',')[3])
+def get_trans_from(line):
+	return line.split(',')[0].split('--->')[0]
+def get_trans_to(line):
+	return line.split(',')[0].split('--->')[1]
 ################################################################################
