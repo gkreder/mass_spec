@@ -13,10 +13,12 @@ start_time = time.time()
 adduct_tolerance = 0.1
 top_dir = os.getcwd() + '/'
 test = False
+in_file = False
+file_name = ''
 if len(sys.argv) < 2:
 	sys.exit('''\t Error: must specify input directory
 
-				USAGE: python [-d adduct_tolerance] ''' + \
+				USAGE: python [-d adduct_tolerance -n file_name] ''' + \
 				'fast_merge.py directory_name')
 for i, arg in enumerate(sys.argv[1 : -1]):
 	if arg[0] == '-':
@@ -27,9 +29,15 @@ for i, arg in enumerate(sys.argv[1 : -1]):
 		adduct_tolerance = float(sys.argv[i + 2])
 	if arg == '--test':
 		test = True
+	if arg =='-n':
+		in_file = True
+		file_name = sys.argv[i + 2]
 
 if sys.argv[-2][0] == '-' and sys.argv[-2][0 : 2] != '--':
-	sys.exit('''Error: must specify input file''')
+	sys.exit('''Error: must specify input directory''')
+
+if sys.argv[-1][0] == '-':
+	sys.exit('''Error: Hanging argument flag''')
 
 in_folder = top_dir + sys.argv[-1]
 out_folder = in_folder + '/../output/'
@@ -45,6 +53,10 @@ trans_files = [x for x in os.listdir() if x[0] != '.' \
 adduct_files = [x for x in os.listdir() if x[0] != '.' \
 	and '_adducts.csv' in x \
 	and 'merged' not in x]
+
+if in_file:
+	trans_files = [x for x in trans_files if file_name.lower() in x.lower()]
+	adduct_files = [x for x in adduct_files if file_name.lower() in x.lower()]
 cohorts = {}
 
 # check to make sure every transformation file has a coresponding
@@ -53,8 +65,8 @@ adduct_check = [x.split('_adducts.csv')[0] for x in adduct_files]
 for i, x in enumerate(trans_files):
 	name = x.split('_transformations.csv')[0]
 	if name not in adduct_check:
-		sys.exit('Error: Couldn\'t find corresponding adduct file for \
-			transformation file ' + name)
+		sys.exit('Error: Couldn\'t find corresponding adduct file for ' +\
+			'transformation file ' + name)
 if len(adduct_files) != len(trans_files):
 	sys.exit('Error: Each transformation file must have an adduct file and \
 		vice versa')
@@ -119,6 +131,7 @@ for cohort_i, cohort in enumerate(cohorts):
 	cohort_adducts = sorted([x for x in adduct_files if cohort in x])
 	for file_index, file in enumerate(cohort_trans):
 		summary_name = file.split('_transformations.csv')[0]
+		num_adducts = 0
 		print('\t***' + summary_name + '***')
 		num_redun = 0
 		num_recorded = 0
@@ -133,6 +146,7 @@ for cohort_i, cohort in enumerate(cohorts):
 			for x in loop_lines:
 				# Only keep adduct lines within tolerance
 				if get_adduct_err(x) <= adduct_tolerance:
+					num_adducts += 1
 					if get_adduct_from(x) in adducts:
 						adducts[get_adduct_from(x)].append(get_adduct_to(x))
 					else:
@@ -165,7 +179,7 @@ for cohort_i, cohort in enumerate(cohorts):
 		# save file summary
 		summary_files = file + ', ' + cohort_adducts[file_index]
 		cohort_summaries[cohort].append((summary_name, summary_files, \
-			num_recorded, num_redun))
+			num_recorded, num_redun, num_adducts))
 	# write outfile (merged.csv file) for each cohort
 	out_file = cohort + '_merged.csv'
 	with open(out_file, 'w') as f:
@@ -178,20 +192,38 @@ for cohort_i, cohort in enumerate(cohorts):
 print('Writing summary files')
 for cohort in cohorts:
 	summary_file = cohort + '_' + '_merged_summary.txt'
+	total_recorded = 0
+	total_redun = 0
+	total_adducts = 0
 	with open(summary_file, 'w') as f:
 		print('-------------------------------------------------------', file=f)
 		print('Input directory --- ' + in_folder, file = f)
 		print('System call --- ' + ' '.join(sys.argv), file = f)
 		print('Adduct tolerance --- ' + str(adduct_tolerance), file = f)
+		print('Total runtime --- ' + \
+			str(round((time.time() - start_time) / 60, 2)) + \
+			' minutes', file = f)
 		print('-------------------------------------------------------', file=f)
-		for (summary_name, summary_files, num_recorded, num_redun) \
+		for (summary_name, summary_files, num_recorded, num_redun, num_adducts)\
 			in cohort_summaries[cohort]:
 			print('', file = f)
 			print('*' + summary_name +'*', file = f)
 			print('Files --- ' + summary_files, file = f)
 			print('Transformations kept --- ' + str(num_recorded), file = f)
 			print('Transformations discarded --- ' + str(num_redun), file = f)
+			print('Original Transformations --- ' + \
+				str(num_redun + num_recorded), file = f)
+			print('Number of adducts tested --- ' + str(num_adducts), file = f)
 			print('', file= f)
+			total_recorded += num_recorded
+			total_redun += num_redun
+			total_adducts += num_adducts
+		print('*Total*', file = f)
+		print('Transformation kept --- ' + str(total_recorded), file = f)
+		print('Transformation discarded --- ' + str(total_redun), file = f)
+		print('Original Transformations --- ' + \
+				str(total_redun + total_recorded), file = f)
+		print('Number of adducts tested --- ' + str(total_adducts), file = f)
 print('...done --- ' + str(time.time() - start_time) + ' seconds elapsed')
 ################################################################################
 # Move output files to output directory

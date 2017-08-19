@@ -84,7 +84,7 @@ def check_time(i, lines, start_time, tabs = 0):
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 	if i == index_90:
-		print('90% Complete --- ' + 
+		print(print_string + '90% Complete --- ' + 
 			  str(time.time() - start_time) + ' seconds elapsed')
 		sys.stdout.flush()
 ################################################################################

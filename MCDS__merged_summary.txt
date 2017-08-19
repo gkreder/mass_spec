@@ -1,0 +1,17 @@
+-------------------------------------------------------
+Input directory --- /netapp/home/gkreder/Fischbach/mass_spec/data/input/
+System call --- fast_merge.py -n MCDS data/input/
+Adduct tolerance --- 0.1
+-------------------------------------------------------
+
+*MCDS_HILIC-pos*
+Files --- MCDS_HILIC-pos_transformations.csv, MCDS_HILIC-pos_adducts.csv
+Transformations kept --- 551
+Transformations discarded --- 41803
+
+
+*MCDS_LIPID*
+Files --- MCDS_LIPID_transformations.csv, MCDS_LIPID_adducts.csv
+Transformations kept --- 925
+Transformations discarded --- 51611
+
