@@ -7,6 +7,7 @@ import os
 import time
 import math
 from xlrd import open_workbook
+import itertools
 from fast_aux import *
 start_time = time.time()
 ################################################################################
@@ -79,8 +80,34 @@ if len(mz_list_pos) != len(names_pos):
 # transformations = dict(zip(mz_list, names))
 transformations_pos = dict(zip(mz_list_pos, names_pos))
 transformations_neg = dict(zip(mz_list_neg, names_neg))
+
+# Want transformations (and corresponding delta_mz values) BETWEEN the
+# adducts in the sheet, not the actual mz values themselves 
+def temp_string(x,y, d):
+	return d[y] + '--->' + d[x]
+temp_pos = [(x-y, temp_string(x,y,transformations_pos)) \
+	for (x,y) in itertools.combinations(transformations_pos, 2)]
+temp_pos_2 = [(y-x, temp_string(y,x,transformations_pos)) \
+	for (x,y) in itertools.combinations(transformations_pos, 2)]
+temp_pos = temp_pos + temp_pos_2
+transformations_pos = dict(zip([x for (x,y) in temp_pos], \
+	[y for (x,y) in temp_pos]))
+
+temp_neg = [(x-y, temp_string(x,y,transformations_neg)) \
+	for (x,y) in itertools.combinations(transformations_neg, 2)]
+temp_neg_2 = [(y-x, temp_string(y,x,transformations_neg)) \
+	for (x,y) in itertools.combinations(transformations_neg, 2)]
+temp_neg = temp_neg + temp_neg_2
+transformations_neg = dict(zip([x for (x,y) in temp_neg], \
+	[y for (x,y) in temp_neg]))
+
+mz_list_pos = [x for x in transformations_pos]
+mz_list_neg = [x for x in transformations_neg]
 max_diff_pos = max([abs(x) for x in transformations_pos.keys()])
 max_diff_neg = max([abs(x) for x in transformations_neg.keys()])
+
+print(transformations_pos)
+sys.exit()
 
 # max_diff = max([abs(x) for x in transformations.keys()])
 
